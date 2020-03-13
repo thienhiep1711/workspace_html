@@ -7,7 +7,6 @@ import sass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
 import imagemin from 'gulp-imagemin'
 import flatten from 'gulp-flatten'
-import rename from 'gulp-rename'
 import concat from 'gulp-concat'
 import uglify from 'gulp-uglify'
 import pug from 'gulp-pug'
@@ -49,25 +48,14 @@ const files = {
     glob: 'src/js/include/custom/*.js',
     dest: 'dist/js'
   },
-  scriptVendors: {
-    src: 'src/js',
-    glob: 'src/js/include/vendor/*.js',
-    dest: 'dist/js'
-  },
-  scriptLibs: {
-    src: 'src/js',
-    glob: 'src/js/include/plugin/*.js',
-    dest: 'dist/js'
-  },
-  scriptPlugins: {
-    src: 'src/js',
-    glob: 'src/js/include/plugins/*.js',
-    dest: 'dist/js'
-  },
   templates: {
-    src: 'src/pug',
-    glob: 'src/pug/pages/*.pug',
-    watcher: 'src/pug/**/*.pug',
+    src: 'src/templates',
+    glob: 'src/pages/*.pug',
+    watcher: [
+      'src/templates/**/*.pug',
+      'src/pages/*.pug',
+      'src/modules/**/*.pug'
+    ],
     dest: 'dist'
   },
   maps: {
@@ -168,65 +156,6 @@ export const stylePlugin = done => {
   done()
 }
 
-// Javascript tasks
-export const scriptVendors = done => {
-  src(files.scriptVendors.glob)
-    .pipe(
-      plumber({
-        errorHandler: function (error) {
-          console.log(error.message)
-          this.emit('end')
-        }
-      })
-    )
-    .pipe(concat('vendors.js'))
-    .pipe(dest(files.scriptVendors.dest))
-    .pipe(
-      rename({
-        suffix: '.min'
-      })
-    )
-    .pipe(uglify())
-    .pipe(dest(files.scriptVendors.dest))
-  done()
-}
-
-export const scriptLibs = done => {
-  src(files.scriptLibs.glob)
-    .pipe(
-      sourcemaps.init({
-        loadMaps: true
-      })
-    )
-    .pipe(
-      plumber({
-        errorHandler: function (error) {
-          console.log(error.message)
-          this.emit('end')
-        }
-      })
-    )
-    .pipe(concat('plugins.js'))
-    .pipe(dest(files.scriptLibs.dest))
-    .pipe(sourcemaps.write(files.maps.script))
-    .pipe(dest(files.scriptLibs.dest))
-  done()
-}
-
-export const scriptPlugins = done => {
-  src(files.scriptPlugins.glob)
-    .pipe(
-      plumber({
-        errorHandler: function (error) {
-          console.log(error.message)
-          this.emit('end')
-        }
-      })
-    )
-    .pipe(dest(files.scriptPlugins.dest))
-  done()
-}
-
 export const scriptCustoms = done => {
   src(files.scriptCustoms.glob)
     .pipe(
@@ -316,9 +245,6 @@ export const dev = done => {
   watch(files.css.glob, series(styleMain))
   watch(files.cssPlugins.glob, series(stylePlugin))
   watch(files.scriptCustoms.glob, series(scriptCustoms, browserSyncReload))
-  watch(files.scriptLibs.glob, series(scriptLibs, browserSyncReload))
-  watch(files.scriptVendors.glob, series(scriptVendors, browserSyncReload))
-  watch(files.scriptPlugins.glob, series(scriptPlugins, browserSyncReload))
   watch(files.templates.watcher, series(templates, browserSyncReload))
   watch(files.fonts.glob, series(fonts, browserSyncReload))
   watch(files.images.glob, series(images, browserSyncReload))
@@ -330,9 +256,6 @@ export const build = parallel(
   styleMain,
   stylePlugin,
   scriptCustoms,
-  scriptLibs,
-  scriptVendors,
-  scriptPlugins,
   templates,
   images,
   fonts
