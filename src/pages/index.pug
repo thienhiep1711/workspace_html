@@ -1,0 +1,9 @@
+extends ../templates/_layouts/_layouts
+include ../templates/_mixins/_image.pug
+
+block variables
+  - var title = "Index";
+
+block content
+  +image('../img/products/img-news-1.jpg', 'btn class')
+  +image('../img/products/img-news-2.jpg', 'btn class')
