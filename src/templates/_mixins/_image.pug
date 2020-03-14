@@ -1,4 +1,4 @@
-mixin image(srcSource, className)
+mixin image(srcSource, className, classImage)
  .image(class=className)
    figure
-    img(src=srcSource, alt="")
+    img(class=classImage, src=srcSource, alt="")
