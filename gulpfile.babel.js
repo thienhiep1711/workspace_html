@@ -1,6 +1,9 @@
 import { src, dest, watch, parallel, series } from 'gulp'
 import del from 'del'
-import babel from 'gulp-babel'
+import rollup from 'gulp-better-rollup'
+import rbabel from 'rollup-plugin-babel'
+import resolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 import sourcemaps from 'gulp-sourcemaps'
 import plumber from 'gulp-plumber'
 import sass from 'gulp-sass'
@@ -8,7 +11,6 @@ import autoprefixer from 'gulp-autoprefixer'
 import imagemin from 'gulp-imagemin'
 import flatten from 'gulp-flatten'
 import concat from 'gulp-concat'
-import uglify from 'gulp-uglify'
 import pug from 'gulp-pug'
 const browsersync = require('browser-sync').create()
 
@@ -180,7 +182,7 @@ export const scriptLibs = done => {
         }
       })
     )
-    .pipe(babel({ presets: ['@babel/preset-env'] }))
+    .pipe(rollup({ plugins: [rbabel(), resolve(), commonjs()] }, 'umd'))
     .pipe(concat('main.js'))
     .pipe(dest(files.scriptLibs.dest))
     .pipe(sourcemaps.write(files.maps.script))
@@ -203,7 +205,7 @@ export const scriptCustoms = done => {
         }
       })
     )
-    .pipe(babel({ presets: ['@babel/preset-env'] }))
+    .pipe(rollup({ plugins: [rbabel(), resolve(), commonjs()] }, 'umd'))
     .pipe(concat('customs.js'))
     .pipe(dest(files.scriptCustoms.dest))
     .pipe(sourcemaps.write(files.maps.script))

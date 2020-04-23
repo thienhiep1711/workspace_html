@@ -1,5 +1,5 @@
 /* global Element, Promise, getComputedStyle, CustomEvent */
-import { makeArray, curry, getProp, parseOptions, setProp, partial, pipe, map, whileDo } from 'lib/utils'
+import { makeArray, curry, getProp, parseOptions, setProp, partial, pipe, map, whileDo } from './utils'
 import Tweezer from 'tweezer.js'
 
 const _getElementRect = (el) => el.getBoundingClientRect()
