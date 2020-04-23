@@ -43,6 +43,15 @@ const files = {
     glob: 'src/img/**/*',
     dest: 'dist/img'
   },
+  scriptLibs: {
+    src: 'src/js',
+    glob: 'src/js/*.js',
+    watcher: [
+      'src/modules/**/*.js',
+      'src/js/main.js'
+    ],
+    dest: 'dist/js'
+  },
   scriptCustoms: {
     src: 'src/js',
     glob: 'src/js/include/custom/*.js',
@@ -156,6 +165,29 @@ export const stylePlugin = done => {
   done()
 }
 
+export const scriptLibs = done => {
+  src(files.scriptLibs.glob)
+    .pipe(
+      sourcemaps.init({
+        loadMaps: true
+      })
+    )
+    .pipe(
+      plumber({
+        errorHandler: function (error) {
+          console.log(error.message)
+          this.emit('end')
+        }
+      })
+    )
+    .pipe(babel({ presets: ['@babel/preset-env'] }))
+    .pipe(concat('main.js'))
+    .pipe(dest(files.scriptLibs.dest))
+    .pipe(sourcemaps.write(files.maps.script))
+    .pipe(dest(files.scriptLibs.dest))
+  done()
+}
+
 export const scriptCustoms = done => {
   src(files.scriptCustoms.glob)
     .pipe(
@@ -244,6 +276,7 @@ export const dev = done => {
   watch(files.bootstrap.glob, series(styleBootstrap))
   watch(files.css.glob, series(styleMain))
   watch(files.cssPlugins.glob, series(stylePlugin))
+  watch(files.scriptLibs.watcher, series(scriptLibs, browserSyncReload))
   watch(files.scriptCustoms.glob, series(scriptCustoms, browserSyncReload))
   watch(files.templates.watcher, series(templates, browserSyncReload))
   watch(files.fonts.glob, series(fonts, browserSyncReload))
@@ -255,6 +288,7 @@ export const build = parallel(
   styleBootstrap,
   styleMain,
   stylePlugin,
+  scriptLibs,
   scriptCustoms,
   templates,
   images,
