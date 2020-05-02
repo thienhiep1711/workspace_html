@@ -43,6 +43,9 @@
 .#{$ionicons-prefix}ios-contact-outline:before,
 .#{$ionicons-prefix}man:before,
 .#{$ionicons-prefix}paper-airplane:before,
+.#{$ionicons-prefix}pin:before,
+.#{$ionicons-prefix}pinpoint:before,
+.#{$ionicons-prefix}android-pin:before,
 {
   @extend .ion;
 }
@@ -90,3 +93,6 @@
 .#{$ionicons-prefix}ios-contact-outline:before { content: $ionicon-var-ios-contact-outline; }
 .#{$ionicons-prefix}man:before { content: $ionicon-var-man; }
 .#{$ionicons-prefix}paper-airplane:before { content: $ionicon-var-paper-airplane; }
+.#{$ionicons-prefix}pin:before { content: $ionicon-var-pin; }
+.#{$ionicons-prefix}pinpoint:before { content: $ionicon-var-pinpoint; }
+.#{$ionicons-prefix}android-pin:before { content: $ionicon-var-android-pin; }

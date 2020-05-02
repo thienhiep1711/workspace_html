@@ -3,6 +3,11 @@
 
 .header {
   z-index: 1001;
+  display: none;
+
+  @include mq(m) {
+    display: block;
+  }
 }
 
 .navigation {
