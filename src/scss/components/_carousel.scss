@@ -8,3 +8,13 @@
 .carousel__item {
   width: 100%;
 }
+
+.carousel--footer {
+  .carousel__item {
+    width: calc(100%/6);
+  }
+
+  .carousel__image {
+    @include aspect(120, 170);
+  }
+}

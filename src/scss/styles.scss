@@ -1,5 +1,6 @@
 /*---Base---*/
 @import "base/_typography.scss";
+@import "base/reset";
 
 /*---Layout---*/
 @import "layouts/_layout.scss";
@@ -15,6 +16,7 @@
 @import "components/sidebar-logo";
 
 /*---Components---*/
+@import "components/image_lazy";
 @import "components/_button.scss";
 @import "components/_checkbox_radio.scss";
 @import "components/_cart-popup.scss";
