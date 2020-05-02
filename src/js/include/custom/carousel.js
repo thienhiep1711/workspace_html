@@ -2,6 +2,7 @@
 export default () => {
   $('.carousel').flickity({
     cellAlign: 'left',
-    contain: true
+    contain: true,
+    pageDots: false
   })
 }
