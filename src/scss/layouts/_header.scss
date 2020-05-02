@@ -1,9 +1,81 @@
 ﻿@import "../helpers/_mixins.scss";
 @import "../helpers/_variables.scss";
 
-#header-main {
-  background-color: rgba(0, 0, 0, 0.8);
+.header {
   z-index: 1001;
+}
+
+.navigation {
+  border-bottom: 1px solid $border-color-secondary;
+
+  .icon {
+    font-size: 18px;
+    line-height: 1em;
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+  }
+}
+
+.navigation__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation__logo {
+  padding: 8px 0;
+}
+
+.navigation__main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navigation__contact {
+  padding: 0 0 0 10px;
+  a {
+    display: inline-block;
+    margin: 0 10px;
+    color: $c-gray-6;
+  }
+}
+
+.navigation__social {
+  padding: 0 15px;
+  a {
+    margin: 0 5px;
+    color: $c-gray-6;
+  }
+}
+
+.navigation__langguage {
+  position: relative;
+}
+
+.navigation__langguage-item {
+  img {
+    max-width: 27px;
+  }
+}
+
+.navigation__langguage-title {
+  margin-left: 8px;
+  color: $c-gray-6;
+}
+
+.navigation__langguage-dropdown {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navigation__account {
+  margin-left: 15px;
+}
+
+.navigation__account-button {
+  margin-left: 5px;
 }
 
 #mainMenu {
@@ -267,11 +339,5 @@
         }
       }
     }
-  }
-}
-
-@include mq(max-sm) {
-  #header-main {
-    display: none;
   }
 }

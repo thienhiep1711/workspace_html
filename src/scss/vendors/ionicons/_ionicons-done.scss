@@ -34,6 +34,7 @@
 .#{$ionicons-prefix}checkmark-circled:before,
 .#{$ionicons-prefix}android-checkmark-circle:before,
 .#{$ionicons-prefix}ios-checkmark-outline:before,
+.#{$ionicons-prefix}ios-arrow-down:before,
 {
   @extend .ion;
 }
@@ -72,3 +73,4 @@
 .#{$ionicons-prefix}checkmark-circled:before { content: $ionicon-var-checkmark-circled; }
 .#{$ionicons-prefix}android-checkmark-circle:before { content: $ionicon-var-android-checkmark-circle; }
 .#{$ionicons-prefix}ios-checkmark-outline:before { content: $ionicon-var-ios-checkmark-outline; }
+.#{$ionicons-prefix}ios-arrow-down:before { content: $ionicon-var-ios-arrow-down; }
