@@ -1,8 +1,14 @@
 /* global $ */
 export default () => {
-  $('.carousel').flickity({
+  $('.js-carousel-logo').flickity({
     cellAlign: 'left',
     contain: true,
     pageDots: false
+  })
+  $('.js-carousel-main').flickity({
+    cellAlign: 'left',
+    contain: true,
+    prevNextButtons: false
+
   })
 }

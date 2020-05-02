@@ -46,6 +46,10 @@
 .#{$ionicons-prefix}pin:before,
 .#{$ionicons-prefix}pinpoint:before,
 .#{$ionicons-prefix}android-pin:before,
+.#{$ionicons-prefix}ios-calendar:before,
+.#{$ionicons-prefix}ios-calendar-outline:before,
+.#{$ionicons-prefix}android-plane:before,
+.#{$ionicons-prefix}flash:before,
 {
   @extend .ion;
 }
@@ -96,3 +100,7 @@
 .#{$ionicons-prefix}pin:before { content: $ionicon-var-pin; }
 .#{$ionicons-prefix}pinpoint:before { content: $ionicon-var-pinpoint; }
 .#{$ionicons-prefix}android-pin:before { content: $ionicon-var-android-pin; }
+.#{$ionicons-prefix}ios-calendar:before { content: $ionicon-var-ios-calendar; }
+.#{$ionicons-prefix}ios-calendar-outline:before { content: $ionicon-var-ios-calendar-outline; }
+.#{$ionicons-prefix}android-plane:before { content: $ionicon-var-android-plane; }
+.#{$ionicons-prefix}flash:before { content: $ionicon-var-flash; }

@@ -1,0 +1,60 @@
+.mega-search
+  .mega-search__wrapper
+    .mega-search__carousel
+      .carousel.carousel--mega-search.js-carousel-main
+        .carousel__item
+          a(herf="#" title)
+            +image-lazy('img/logo/banner-main-1.jpg', 'carousel__image', 'cover')
+        .carousel__item
+          a(herf="#" title)
+            +image-lazy('img/logo/banner-main-1.jpg', 'carousel__image', 'cover')
+        .carousel__item
+          a(herf="#" title)
+            +image-lazy('img/logo/banner-main-1.jpg', 'carousel__image', 'cover')
+        .carousel__item
+          a(herf="#" title)
+            +image-lazy('img/logo/banner-main-1.jpg', 'carousel__image', 'cover')
+    .container
+      .mega-search__box
+        .mega-search__tab
+          .mega-search__tab-item
+            i.icon.ion-android-car
+            span Thuê xe
+          .mega-search__tab-item
+            i.icon.ion-android-plane
+            span Xe sân bay
+          .mega-search__tab-item
+            i.icon.ion-flash
+            span Yêu cầu đặc biệt
+        .mega-search__content
+          form.mega-search__form(action="#")
+            .form-row
+              .mega-search__grid.col-md-4.form-group
+                span Hành trình
+                .mega-search__row
+                  input(type="text", placeholder="Nhập điểm đến").mega-search__input
+                  .mega-search__icon
+                    i.icon.ion-android-pin
+              .mega-search__grid.col-md-2.form-group
+                span Hình thức
+                .mega-search__row
+                  select(name="").mega-search__select
+                    option(value="1") Hai Chiều
+                    option(value="1") Một Chiều
+                  .mega-search__icon
+                    i.icon.ion-ios-arrow-down
+              .mega-search__grid.col-md-2.form-group
+                span Ngày đi
+                .mega-search__row
+                  input(type="text", placeholder="2020-02-08 08:00").mega-search__input
+                  .mega-search__icon
+                    i.icon.ion-ios-calendar-outline
+              .mega-search__grid.col-md-2.form-group
+                span Ngày về
+                .mega-search__row
+                  input(type="text", placeholder="2020-02-08 08:00").mega-search__input
+                  .mega-search__icon
+                    i.icon.ion-ios-calendar-outline
+              .mega-search__grid.col-md-2.form-group
+                .mega-search__row
+                  button(type="submit").bt.bt--primary.mega-search__button Tìm kiếm

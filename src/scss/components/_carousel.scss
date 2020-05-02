@@ -44,3 +44,32 @@
     @include aspect(120, 170);
   }
 }
+
+.carousel--mega-search {
+  margin: 0;
+
+  .carousel__item {
+    padding: 0;
+  }
+
+  .carousel__image {
+    @include aspect(334, 750);
+
+    @include mq(m) {
+      @include aspect(335, 1914);
+    }
+  }
+
+  .flickity-page-dots {
+    display: none;
+
+    @include mq(m) {
+      display: block;
+      position: absolute;
+      right: 16px;
+      bottom: 10px;
+      z-index: 9;
+      text-align: right;
+    }
+  }
+}

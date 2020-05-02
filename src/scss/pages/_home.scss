@@ -42,3 +42,99 @@
   margin-top: 30px;
   text-align: center;
 }
+
+.mega-search__box {
+  position: relative;
+  margin-top: -40px;
+
+  @include mq(sm) {
+    margin-top: -47px;
+  }
+}
+
+.mega-search__tab {
+  display: flex;
+}
+
+.mega-search__tab-item {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 9px 12px;
+  margin-right: 1px;
+  font-size: 13px;
+  color: $color-white;
+
+  @include mq(sm) {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  .icon {
+    margin-right: 5px;
+
+    @include mq(sm) {
+      font-size: 18px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.mega-search__content {
+  padding: 15px 0;
+}
+
+.mega-search__form {
+  @include mq(m) {
+    flex-direction: row;
+  }
+}
+
+.mega-search__grid {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  span {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.mega-search__row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-search__input,
+.mega-search__select {
+  height: 36px;
+  border: 1px solid $border-color-primary;
+  text-indent: 10px;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: 14px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.mega-search__select {
+  -webkit-appearance: none;
+}
+
+.mega-search__input {
+  padding-right: 36px;
+}
+
+.mega-search__icon {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+
+  .icon {
+    font-size: 18px;
+    color: $c-gray-9;
+  }
+}
