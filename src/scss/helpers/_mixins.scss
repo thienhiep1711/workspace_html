@@ -106,3 +106,11 @@
 @mixin transition($target: all, $time: 0.3s, $ease: ease) {
   transition: $target $time $ease;
 }
+
+@mixin aspect($height: 9, $width: 16, $positions: 'before') {
+  &:#{$positions} {
+    content: '';
+    display: block;
+    padding-top: ($height / $width) * 100%;
+  }
+}
