@@ -73,3 +73,21 @@
     }
   }
 }
+
+.carousel--banner {
+  .carousel__item {
+    width: 100%;
+
+    @include mq(sm) {
+      width: calc(100%/2);
+    }
+
+    @include mq(m) {
+      width: calc(100%/3);
+    }
+  }
+
+  .carousel__image {
+    @include aspect(163, 373);
+  }
+}
