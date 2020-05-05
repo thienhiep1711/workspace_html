@@ -1,1 +1,10 @@
-﻿
+﻿@import "../helpers//mixins";
+
+@include font(Open Sans Bold, OpenSans-Regular);
+@include font(Open Sans Bold, OpenSans-Bold);
+@include font(Open Sans Light, OpenSans-Light);
+
+@include font(Roboto, Roboto-Regular);
+@include font(Roboto Bold, Roboto-Bold);
+@include font(Roboto Medium, Roboto-Medium);
+@include font(Roboto Light, Roboto-Light);

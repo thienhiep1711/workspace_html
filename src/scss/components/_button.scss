@@ -14,6 +14,7 @@ $pre: "bt";
   border-style: $bt-border-style;
   border-width: $bt-border-width;
   padding: $bt-padding;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
   }
@@ -43,12 +44,13 @@ $pre: "bt";
     }
   }
   &--default {
-    background-color: $bt-background-default;
-    border-color: $bt-background-default;
-    color: $text-color-primary;
+    background-color: transparent;
+    border-color: #d3d3d3;
+    color: $color-primary;
     &:hover {
-      background-color: $bt-background-hover-default;
-      border-color: $bt-background-hover-default;
+      background-color: $color-primary;
+      border-color: $color-primary;
+      color: $color-white;
     }
   }
 }

@@ -20,7 +20,7 @@ $font-myriadpro-light: "myriad-pro-light";
 
 $font-default: "Helvetica,Arial," DejaVu Sans "," Liberation Sans ",Freesans,sans-serif";
 
-$font-face-primary: $font-default;
+$font-face-primary: $font-roboto;
 $font-size-primary: 15px;
 $background-primary: #ffffff;
 $text-color-primary: #383838;
@@ -42,11 +42,11 @@ $c-black-1: #1a1819;
 
 /* Buttons */
 $bt-default: #dfdfdf;
-$bt-size: 14px;
+$bt-size: 15px;
 $bt-weight: normal;
-$bt-padding: 8px 16px;
+$bt-padding: 9px 30px;
 $bt-radius: 0px;
-$bt-border-width: 0px;
+$bt-border-width: 1px;
 $bt-border-style: solid;
 $bt-transition: 0.2s ease-in;
 
