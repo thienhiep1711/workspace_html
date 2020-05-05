@@ -421,3 +421,70 @@
     display: block;
   }
 }
+
+.home-journey__item {
+  &:hover {
+    .home-journey__content {
+      background-color: $color-primary;
+    }
+
+    .home-journey__content-title {
+      color: $color-white;
+    }
+
+    .home-journey__image {
+      img {
+        transform: scale(1.15);
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.home-journey__image {
+  @include aspect(220, 294);
+  overflow: hidden;
+
+  &:after {
+    @include transition;
+    content: "Xem thêm";
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  img {
+    @include transition;
+  }
+}
+
+.home-journey__content {
+  @include transition;
+  padding: 20px;
+  background-color: #eeeeee;
+}
+
+.home-journey__content-title {
+  @include transition;
+  font-size: 16px;
+  font-family: $font-roboto-bold;
+  color: $text-color-primary;
+}
+
+.home-journey__item {
+  display: flex;
+  flex-direction: column;
+}

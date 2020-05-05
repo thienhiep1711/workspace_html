@@ -16,4 +16,9 @@ export default () => {
     pageDots: false,
     watchCSS: true
   })
+  $('.js-carousel-journey').flickity({
+    cellAlign: 'left',
+    contain: true,
+    pageDots: false
+  })
 }
