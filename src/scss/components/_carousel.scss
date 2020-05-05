@@ -91,3 +91,31 @@
     @include aspect(163, 373);
   }
 }
+
+.carousel--event {
+  @include mq(sm) {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .carousel__item {
+    @include mq(sm) {
+      width: 50%;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    @include mq(ml) {
+      width: 33.333%;
+    }
+  }
+
+  &:after {
+    content: 'flickity';
+    display: none;
+
+    @include mq(ml) {
+      content: '';
+    }
+  }
+}

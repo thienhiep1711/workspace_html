@@ -9,6 +9,11 @@ export default () => {
     cellAlign: 'left',
     contain: true,
     prevNextButtons: false
-
+  })
+  $('.js-carousel-event').flickity({
+    cellAlign: 'left',
+    contain: true,
+    pageDots: false,
+    watchCSS: true
   })
 }
