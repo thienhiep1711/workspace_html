@@ -53,6 +53,8 @@
 .#{$ionicons-prefix}ios-star:before,
 .#{$ionicons-prefix}ios-star-half:before,
 .#{$ionicons-prefix}ios-star-outline:before,
+.#{$ionicons-prefix}ios-plus:before,
+.#{$ionicons-prefix}plus:before,
 {
   @extend .ion;
 }
@@ -110,3 +112,5 @@
 .#{$ionicons-prefix}ios-star:before { content: $ionicon-var-ios-star; }
 .#{$ionicons-prefix}ios-star-half:before { content: $ionicon-var-ios-star-half; }
 .#{$ionicons-prefix}ios-star-outline:before { content: $ionicon-var-ios-star-outline; }
+.#{$ionicons-prefix}ios-plus:before { content: $ionicon-var-ios-plus; }
+.#{$ionicons-prefix}plus:before { content: $ionicon-var-plus; }

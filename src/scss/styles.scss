@@ -8,13 +8,6 @@
 @import "layouts/_sidebar.scss";
 @import "layouts/_footer.scss";
 
-/*---Sidebar---*/
-@import "components/sidebar-menu";
-@import "components/sidebar-lang";
-@import "components/sidebar-toggle";
-@import "components/sidebar-search";
-@import "components/sidebar-logo";
-
 /*---Components---*/
 @import "components/image_lazy";
 @import "components/_button.scss";
@@ -30,6 +23,13 @@
 @import "components/menu-main";
 @import "components/flickity";
 @import "components/carousel";
+
+/*---Sidebar---*/
+@import "components/sidebar-menu";
+@import "components/sidebar-lang";
+@import "components/sidebar-toggle";
+@import "components/sidebar-search";
+@import "components/sidebar-logo";
 
 /*---Modules---*/
 // @import "modules/_cart.scss";

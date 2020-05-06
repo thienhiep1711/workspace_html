@@ -75,111 +75,22 @@
   visibility: hidden;
 }
 
-.navigation__account {
-  margin-left: 15px;
-}
-
 .navigation__account-button {
   margin-left: 5px;
+
+  &.bt {
+    padding: 5px 16px;
+  }
 }
 
-#mainMenu {
-  float: left;
-  display: inline-block;
+.navigation__langguage {
 
-  > ul {
-    float: left;
-    text-align: left;
+}
 
-    > li {
-      display: block;
-      float: left;
-      position: relative;
-      padding: 0 15px;
-
-      > a {
-        display: block;
-        color: #fff;
-        font-size: 16px;
-        padding: 10px 0;
-        float: left;
-        position: relative;
-
-        &:after {
-          content: "";
-          width: 0;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          height: 2px;
-          transition: width 0.2s ease-out;
-          background-color: $color-primary;
-        }
-      }
-
-      &:hover {
-        > a {
-          &:after {
-            width: 100%;
-            transition: width 0.4s ease-in;
-          }
-        }
-
-        > ul {
-          transform: translateX(60px);
-          visibility: visible;
-          opacity: 1;
-          transition: 0.4s ease-in;
-        }
-      }
-
-      > ul {
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-        transition: 0.2s ease-out;
-        left: -60px;
-        top: 42px;
-        padding: 10px 20px;
-        background-color: rgba(0, 0, 0, 1);
-        border-radius: 0 0 8px 8px;
-
-        > li {
-          display: block;
-          float: left;
-          width: 200px;
-          position: relative;
-
-          > a {
-            display: block;
-            float: left;
-            font-size: 15px;
-            color: #fff;
-            padding: 10px 0;
-
-            &:after {
-              content: "";
-              width: 0;
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              height: 1px;
-              transition: width 0.2s ease-out;
-              background-color: $color-primary;
-            }
-
-            &:hover {
-              color: white;
-
-              &:after {
-                width: 50px;
-                transition: width 0.4s ease-in;
-              }
-            }
-          }
-        }
-      }
-    }
+.navigation__langguage-toggle {
+  .icon {
+    margin-left: 5px;
+    margin-right: 0;
   }
 }
 

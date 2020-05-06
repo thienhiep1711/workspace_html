@@ -36,11 +36,11 @@ $pre: "bt";
     }
   }
   &--secondary {
-    background-color: $bt-background-secondary;
-    border-color: $bt-background-secondary;
+    background-color: transparent;
+    border-color: $color-white;
     &:hover {
-      background-color: $bt-background-hover-secondary;
-      border-color: $bt-background-hover-secondary;
+      background-color: $color-white;
+      color: $color-primary;
     }
   }
   &--default {
@@ -50,6 +50,16 @@ $pre: "bt";
     &:hover {
       background-color: $color-primary;
       border-color: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  &--link {
+    color: $text-color-primary;
+    border: 0;
+    background-color: transparent;
+
+    &:hover {
       color: $color-white;
     }
   }
