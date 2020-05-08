@@ -1,0 +1,36 @@
+.product-info
+  .container
+    .page-title
+      h1.page-title__text Dịch vụ xe 4 chỗ
+    .product__info-inner
+      .product__info-gallery
+        +image-lazy('img/products/banner-product-1.jpg', 'product__info-image', 'cover')
+      .product__info-detail
+        h2.product__info-title Thông tin xe
+        ul.product__info-spec
+          li
+            strong Dòng xe:
+            span Honda Civic, Honda City, Kia Cerato, Toyota Vios, Huyndai Elantra
+          li
+            strong Màu sắc:
+            span Trắng, Xanh, Đen, Đỏ
+          li
+            strong Đời xe:
+            span 2016 - 2019
+          li
+            strong Số chỗ ngồi:
+            span 4
+        .product__info-utils
+          .product__info-utils-title Tiện ích
+          .product__info-utils-list
+            .product__info-utils-item
+              +image-lazy('img/icon/icon-utils-1.png', 'product__info-utils-icon')
+              .product__info-utils-text Nước uống
+            .product__info-utils-item
+              +image-lazy('img/icon/icon-utils-2.png', 'product__info-utils-icon')
+              .product__info-utils-text Khăn mặt
+            .product__info-utils-item
+              +image-lazy('img/icon/icon-utils-3.png', 'product__info-utils-icon')
+              .product__info-utils-text Đỗ xe
+        .product__info-notice
+          span * Giá trên đã bao gồm tiền xe, tiền xăng và phí cầu đường.
