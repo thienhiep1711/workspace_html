@@ -146,3 +146,51 @@
   color: $color-primary;
   font-size: 16px;
 }
+
+.product-detail {
+  background-color: #f6f6f6;
+  padding-bottom: 16px;
+}
+
+.product-detail__inner {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(sm) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+.product-detail__main {
+  @include mq(sm) {
+    flex: 1 1 0;
+  }
+}
+
+.product-detail__sidebar {
+  @include mq(sm) {
+    width: 275px;
+    margin-left: 16px;
+  }
+}
+
+.section-box {
+  background-color: $color-white;
+  margin-top: 16px;
+}
+
+.section-box__title {
+  padding: 20px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.section-box__text {
+  font-size: 16px;
+  font-family: $font-roboto-bold;
+  text-transform: uppercase;
+}
+
+.section-box__content {
+  padding: 25px;
+}
