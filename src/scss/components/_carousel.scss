@@ -187,3 +187,38 @@
     left: 15px;
   }
 }
+
+.carousel--type {
+  & .carousel__item {
+    @include mq(sm) {
+      width: 50%;
+    }
+
+    @include mq(ml) {
+      width: calc(100% / 3);
+    }
+
+    @include mq(l) {
+      width: 25%;
+    }
+  }
+
+  & .carousel__link {
+    border: 1px solid $border-color-primary;
+    display: block;
+  }
+
+  & .carousel__image {
+    @include aspect(115, 170);
+  }
+
+  & .carousel__title {
+    padding: 10px 0;
+    display: block;
+    font-family: $font-roboto-bold;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
