@@ -185,6 +185,10 @@
   border-bottom: 1px solid #cccccc;
 }
 
+.section-box__title--red {
+  color: $color-primary;
+}
+
 .section-box__text {
   font-size: 16px;
   font-family: $font-roboto-bold;
@@ -252,4 +256,21 @@
 
 .product-card__button {
   border-radius: 20px;
+}
+
+.product-booking__title {
+  display: block;
+  color: #606060;
+  font-family: $font-roboto-bold;
+  margin-bottom: 10px;
+}
+
+.product-booking__entry {
+  .form-control {
+    margin-bottom: 15px;
+  }
+}
+
+.product-booking__form {
+  margin-bottom: 20px;
 }

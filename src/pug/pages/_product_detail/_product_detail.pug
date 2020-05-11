@@ -30,23 +30,9 @@
         .section-box
           .section-box__inner
             .section-box__title
-              h3.section-box__text Các loại dịch vụ xe 4 chỗ
+              h3.section-box__text Hình ảnh xe
             .section-box__content
-              include _product_card
-              include _product_card
-        .section-box
-          .section-box__inner
-            .section-box__title
-              h3.section-box__text Các dòng xe
-            .section-box__content
-              include _carousel_type
-        .section-box
-          .section-box__inner
-            .section-box__title
-              h3.section-box__text Đánh giá - Bình luận
-            .section-box__content
-              .product-detail__comment
-                +image-lazy('img/background/facebook.jpg', 'img-responsive')
+              include ../_product/_carousel_type
       .product-detail__sidebar
         .section-box
           .section-box__inner
