@@ -1,0 +1,42 @@
+@import "../helpers/_mixins.scss";
+@import "../helpers/_variables.scss";
+
+.event-info {
+  padding-bottom: 20px;
+}
+
+.event-info__inner {
+  border: 1px solid $border-color-primary;
+}
+
+.event__info-map-img {
+  @include aspect(414, 577);
+}
+
+.event-info__inner-detail {
+  margin-bottom: 10px;
+  ul {
+    li {
+      padding: 13px 0;
+      border-bottom: 1px solid $border-color-primary;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      strong {
+        font-family: $font-roboto-medium;
+        margin-right: 7px;
+      }
+    }
+  }
+}
+
+.event-info__option {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-info__option-button {
+  border-radius: 30px;
+}

@@ -222,3 +222,18 @@
     }
   }
 }
+
+
+.carousel--event-info {
+  & .carousel__image {
+    @include aspect(414, 577);
+  }
+
+  & .flickity-prev-next-button.next {
+    right: 20px;
+  }
+
+  & .flickity-prev-next-button.previous {
+    left: 20px;
+  }
+}

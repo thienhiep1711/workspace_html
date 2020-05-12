@@ -1,0 +1,42 @@
+.container
+  .page-title
+    h1.page-title__text Lễ hội chùa hương
+  .event-info
+    .row
+      .col-md-6
+        .event__info-carousel
+          .event-info__inner
+            .carousel.carousel--event-info.js-carousel-event-info
+              .carousel__item
+                a(herf="#" title)
+                  +image-lazy('img/products/img-event-info-1.jpg', 'carousel__image', 'cover')
+              .carousel__item
+                a(herf="#" title)
+                  +image-lazy('img/products/img-event-info-1.jpg', 'carousel__image', 'cover')
+              .carousel__item
+                a(herf="#" title)
+                  +image-lazy('img/products/img-event-info-1.jpg', 'carousel__image', 'cover')
+          .event-info__inner-detail
+            ul
+              li
+                strong Thời gian:
+                span 11/12/2020
+              li
+                strong Hành trình:
+                span Hà Nội - Chùa Hương
+      .col-md-6
+        .event__info-map
+          .event-info__inner
+            +image-lazy('img/products/img-event-info-2.jpg', 'event__info-map-img', 'contain')
+          .event-info__inner-detail
+            ul
+              li
+                strong Địa điểm:
+                span Bắc Ninh
+              li
+                strong Hành trình:
+                span Khoảng cách 200km
+    .event-info__option
+      a(href="#").bt.bt--primary.event-info__option-button Đặt xe
+      .event-info__option-share
+        +image-lazy('img/products/social-share.jpg')

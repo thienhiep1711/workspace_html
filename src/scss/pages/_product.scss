@@ -243,6 +243,7 @@
 }
 
 .product-card__view {
+  width: 100%;
   border: 1px solid #eeeeee;
 
   @include mq(sm) {

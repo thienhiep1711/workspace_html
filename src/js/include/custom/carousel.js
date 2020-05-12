@@ -27,4 +27,10 @@ export default () => {
     contain: false,
     pageDots: false
   })
+  $('.js-carousel-event-info').flickity({
+    wrapAround: true,
+    cellAlign: 'left',
+    contain: false,
+    pageDots: false
+  })
 }
