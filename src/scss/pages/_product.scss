@@ -79,12 +79,39 @@
   }
 }
 
-.product__info-title {
-  font-size: 21px;
-  font-family: $font-roboto-bold;
+.product__info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   border-bottom: 1px solid $border-color-primary;
   padding-bottom: 15px;
   margin-bottom: 25px;
+}
+
+.product__info-title {
+  flex: 1 1 0;
+
+  h2 {
+    font-family: $font-roboto-bold;
+    font-size: 21px;
+  }
+}
+
+.product__info-price {
+  padding-top: 10px;
+
+  b {
+    font-size: 24px;
+    color: #f50007;
+    font-family: $font-roboto-medium;
+
+    small {
+      font-size: 14px;
+      position: relative;
+      top: -10px;
+      margin-left: 4px;
+    }
+  }
 }
 
 .product__info-spec {
@@ -94,6 +121,7 @@
   }
 
   strong {
+    font-family: $font-roboto-medium;
     width: 25%;
   }
 

@@ -6,9 +6,20 @@
       .product__info-gallery
         +image-lazy('img/products/product-detail.jpg', 'product__info-image', 'cover')
       .product__info-detail
-        .product__info-title
-          h2 Thông tin xe
-          .product__info-price
+        .product__info-header
+          .product__info-title
+            h2 Thông tin xe
+            .product__info-price
+              b 2.500.000
+                small đ
+              span /ngày
+          .product__info-rating
+            .home-product__item-stars
+              i.icon.ion-ios-star
+              i.icon.ion-ios-star
+              i.icon.ion-ios-star
+              i.icon.ion-ios-star
+              i.icon.ion-ios-star
         ul.product__info-spec
           li
             strong Dòng xe:
