@@ -1,3 +1,185 @@
 @import "../helpers/_mixins.scss";
 @import "../helpers/_variables.scss";
-ß
+
+.section-timeline {
+  margin-top: 35px;
+  padding: 0 0 8px;
+}
+
+.about-timeline {
+  position: relative;
+
+  @include mq(sm) {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 84px;
+      width: 7px;
+      height: calc(100% + 8px);
+      border-radius: 3px;
+      background: #afafaf;
+      z-index: 9;
+    }
+  }
+}
+
+.about-timeline__wrapper {
+  padding-left: 30px;
+
+  @include mq(sm) {
+    padding-left: 126px;
+  }
+}
+
+.about-timeline__images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+
+  @include mq(sm) {
+    flex-wrap: nowrap;
+  }
+}
+
+.about-timeline__image {
+  @include aspect(141, 357);
+  width: 100%;
+  margin-top: 10px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @include mq(sm) {
+    width: 33.5%;
+    margin-top: 0;
+  }
+}
+
+.about-timeline__image--small {
+  @include mq(sm) {
+    @include aspect(156, 320);
+    max-width: 320px;
+  }
+}
+
+.about-timeline__image--large {
+  background: #e7e7e7;
+
+  @include mq(sm) {
+    @include aspect(163, 560);
+    flex: 1 0 auto;
+    max-height: 156px;
+    overflow: hidden;
+  }
+
+  & .image-lazy__img {
+    transform: translateY(3px);
+  }
+}
+
+.about-timeline__title {
+  font-size: 24px;
+  line-height: 35px;
+  font-weight: 700;
+  color: $c-red;
+
+  &:before {
+    content: "01";
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-top: 10px;
+    color: $c-black-2;
+
+    @include mq(sm) {
+      font-size: 40px;
+      line-height: 35px;
+      padding-top: 3px;
+    }
+  }
+
+  @include mq(sm) {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 87px;
+      width: 36px;
+      height: 36px;
+      background: $c-red;
+      border: 8px solid $c-gray-2;
+      border-radius: 50%;
+      transform: translate(-50%);
+      z-index: 10;
+    }
+  }
+}
+
+.about-timeline__item {
+  margin-top: 34px;
+
+  &:nth-child(2) {
+    .about-timeline__title {
+      &:before {
+        content: "02";
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .about-timeline__title {
+      &:before {
+        content: "03";
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    .about-timeline__title {
+      &:before {
+        content: "04";
+      }
+    }
+  }
+}
+
+
+.about-timeline__description {
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 23px;
+  color: $c-black;
+}
+
+.section-block--about-book {
+  margin-top: 55px;
+
+  & .section-header {
+    &:before {
+      left: calc(50% - 40px);
+      bottom: -8px;
+      width: 91px;
+      height: 4px;
+    }
+  }
+}
+
+.about-howto {
+  & .home-howto__item-title {
+    color: $c-black-2;
+  }
+
+  & .home-howto__item-icon {
+    width: 70px;
+    height: 70px;
+    border: solid 1px #bb3a28;
+  }
+  & .home-howto__item-inner {
+    &:before {
+      background-color: #bb3a28;
+    }
+  }
+}
