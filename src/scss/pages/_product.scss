@@ -30,6 +30,10 @@
     height: 2px;
     background-color: $color-primary;
   }
+
+  .page-header__title & {
+    text-transform: none;
+  }
 }
 
 .product-info {
