@@ -40,3 +40,49 @@
 .event-info__option-button {
   border-radius: 30px;
 }
+
+.event-card {
+  padding: 15px 0;
+  border-bottom: 1px solid $border-color-primary;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.event-card__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.event-card__image {
+  width: 84px;
+}
+
+.event-card__image-img {
+  @include aspect(65, 84);
+}
+
+.event-card__content {
+  flex: 1 1 0;
+  padding-left: 15px;
+}
+
+.event-card__title {
+  display: block;
+  font-family: $font-roboto-medium;
+  color: $text-color-primary;
+}
+
+.event-card__date {
+  font-size: 13px;
+}
+
+.event-card__description {
+  font-size: 13px;
+}
