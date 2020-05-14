@@ -1,0 +1,180 @@
+@import "../helpers/_mixins.scss";
+@import "../helpers/_variables.scss";
+
+.partner-howto {
+  padding: 30px 0 0;
+
+  @include mq(sm) {
+    padding: 30px 0 0;
+  }
+
+  & .home-howto__item-inner {
+    padding: 0;
+  }
+}
+
+.section-block--book {
+  margin: 0;
+  padding: 40px 0 0;
+
+  @include mq(sm) {
+    padding: 40px 0 0;
+  }
+}
+
+.register-partner {
+  padding-bottom: 76px;
+}
+
+.register-partner__form {
+  .row {
+    @include mq(sm) {
+      margin: 0 -30px;
+    }
+  }
+}
+
+.register-partner__col {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  @include mq(sm) {
+    max-width: 355px;
+    margin-top: 0;
+    padding: 0 30px;
+  }
+
+  & .form-group,
+  & select {
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  & .form-group {
+    position: relative;
+    margin-bottom: 0;
+
+    & .error {
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      margin: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+input {
+  width: 100%;
+  padding: 6px 16px 8px;
+  border: 1px solid #ccc;
+}
+
+select {
+  padding: 7px 16px 5px;
+  border: 1px solid #ccc;
+}
+
+.register-partner__link {
+  font-size: 14px;
+  line-height: 35px;
+  min-width: 227px;
+  margin: 37px 0 0 30px;
+  padding: 2px 30px;
+  color: #fff;
+  background: #dd4a4a;
+  border-radius: 0;
+  border: none;
+  order: 3;
+}
+
+.register-partner__image {
+  @include aspect(1/1);
+  height: 100%;
+}
+
+.register-partner__banner {
+  margin-top: 50px;
+
+  @include mq(sm) {
+    margin: 0;
+  }
+
+  & a {
+    height: 100%;
+  }
+}
+
+.page-title {
+  &.page-title--partner {
+    padding: 47px 0 46px;
+  }
+}
+
+.join-us__image {
+  @include aspect(391/454);
+}
+
+.join-us__image-1 {
+  width: 56px;
+  height: 54px;
+}
+
+.join-us__image-2 {
+  width: 48px;
+  height: 50px;
+}
+
+.join-us__image-3 {
+  width: 53px;
+  height: 53px;
+}
+
+.join-us__image-4 {
+  width: 55px;
+  height: 55px;
+}
+
+.join-us__col {
+  padding: 0 24px;
+}
+
+.join-us__item {
+  height: 100%;
+  padding: 30px 30px 26px;
+  background: #fff;
+}
+
+.join-us__item-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.join-us__item-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 27px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.join-us__item-text {
+  font-size: 14px;
+  margin-top: 14px;
+  color: #666666;
+  line-height: 16px;
+}
+
+.section-header--join-us {
+  margin: 11px 0 70px;
+}
+
+.section-block--join-us {
+  padding: 48px 0 55px;
+}

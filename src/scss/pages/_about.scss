@@ -2,12 +2,13 @@
 @import "../helpers/_variables.scss";
 
 .section-timeline {
-  margin-top: 35px;
+  margin-top: 36px;
   padding: 0 0 8px;
 }
 
 .about-timeline {
   position: relative;
+  margin-bottom: 55px;
 
   @include mq(sm) {
     &:before {
@@ -43,7 +44,7 @@
 }
 
 .about-timeline__image {
-  @include aspect(141, 357);
+  @include aspect(144, 357);
   width: 100%;
   margin-top: 10px;
 
@@ -52,7 +53,7 @@
   }
 
   @include mq(sm) {
-    width: 33.5%;
+    width: calc(100% / 3);
     margin-top: 0;
   }
 }
@@ -119,7 +120,7 @@
 }
 
 .about-timeline__item {
-  margin-top: 34px;
+  margin-top: 27px;
 
   &:nth-child(2) {
     .about-timeline__title {
@@ -150,26 +151,42 @@
 .about-timeline__description {
   font-size: 14px;
   line-height: 21px;
-  margin-top: 23px;
+  margin: 0;
+  padding: 11px 0 17px;
   color: $c-black;
 }
 
-.section-block--about-book {
-  margin-top: 55px;
+.section-header--type2 {
+  margin: 52px 0 61px;
 
-  & .section-header {
+  &.section-header {
     &:before {
       left: calc(50% - 40px);
-      bottom: -8px;
+      bottom: -7px;
       width: 91px;
-      height: 4px;
+      height: 3px;
     }
+  }
+
+  &.section-header--book {
+    margin: 0;
   }
 }
 
 .about-howto {
+  padding: 55px 0 57px;
+
   & .home-howto__item-title {
-    color: $c-black-2;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 23px auto 0;
+    color: #333333;
+  }
+
+  & .home-howto__item-text {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 13px;
   }
 
   & .home-howto__item-icon {
@@ -182,4 +199,10 @@
       background-color: #bb3a28;
     }
   }
+}
+
+.section--faq {
+  max-width: 871px;
+  margin: 0 auto;
+  padding-bottom: 65px;
 }
