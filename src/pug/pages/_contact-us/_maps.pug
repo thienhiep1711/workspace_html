@@ -1,0 +1,38 @@
+.contact-maps
+  .container
+    .page-title.page-title--maps
+      h1.page-title__text Bản đồ
+    .contact-maps__inner
+      .contact-maps__main
+        .section-box.section-box--maps <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29793.98038438121!2d105.8194541087431!3d21.02277876319995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2zSGFub2ksIEhvw6BuIEtp4bq_bSwgSGFub2ksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1589480154462!5m2!1sen!2s" width="879" height="554" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      .product-detail__sidebar.contact-maps__sidebar
+        .section-box
+          .section-box__inner
+            .section-box__title.section-box__title--red
+              h3.section-box__text Thông tin booking
+            .section-box__content
+              select(name="").contact-maps__select
+                option(value="1") Chọn tỉnh/thành phố
+                option(value="1") Hà Nội
+                option(value="2") TPHCM
+                option(value="3") Đà Nẵng
+              select(name="").contact-maps__select
+                option(value="1") Chọn quận/huyện
+                option(value="1") Đống Đa
+                option(value="2") Hà Đông
+                option(value="3") Thanh Xuân
+              select(name="").contact-maps__select
+                option(value="1") Chọn danh mục
+                option(value="1") Xe cá nhân
+                option(value="2") Xe hợp đồng
+                option(value="3") Thuê xe sân bay
+              select(name="").contact-maps__select
+                option(value="1") Chọn loại dịch vụ
+                option(value="1") Xe cá nhân
+                option(value="2") Xe hợp đồng
+                option(value="3") Thuê xe sân bay
+              form.info-booking
+                .info-booking__entry
+                  .info-booking__entry-box
+                    input.info-booking__entry-input.form-control(type="text", placeholder="Từ khoá tìm kiếm")
+              button#frmButton.btn.btn-primary.contact-maps__find-store(type='submit') Tìm kiếm

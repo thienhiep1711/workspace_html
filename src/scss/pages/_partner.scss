@@ -32,6 +32,17 @@
       margin: 0 -30px;
     }
   }
+
+  input {
+    width: 100%;
+    padding: 6px 16px 8px;
+    border: 1px solid #ccc;
+  }
+
+  select {
+    padding: 7px 16px 5px;
+    border: 1px solid #ccc;
+  }
 }
 
 .register-partner__col {
@@ -66,17 +77,6 @@
       transform: translateY(-50%);
     }
   }
-}
-
-input {
-  width: 100%;
-  padding: 6px 16px 8px;
-  border: 1px solid #ccc;
-}
-
-select {
-  padding: 7px 16px 5px;
-  border: 1px solid #ccc;
 }
 
 .register-partner__link {
