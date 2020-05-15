@@ -619,8 +619,6 @@
 .home-howto__inner {
   display: flex;
   flex-direction: column;
-  margin-right: -16px;
-  margin-left: -16px;
 
   @include mq(ml) {
     flex-direction: row;

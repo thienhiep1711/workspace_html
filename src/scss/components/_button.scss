@@ -17,6 +17,7 @@ $pre: "bt";
   text-decoration: none;
   &:hover {
     cursor: pointer;
+    color: $color-white;
   }
   &__block {
     width: 100%;
@@ -60,7 +61,7 @@ $pre: "bt";
     background-color: transparent;
 
     &:hover {
-      color: $color-white;
+      color: $color-primary;
     }
   }
 }

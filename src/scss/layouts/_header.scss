@@ -73,6 +73,39 @@
   position: absolute;
   opacity: 0;
   visibility: hidden;
+  width: 140px;
+  border: 1px solid $border-color-primary;
+  background-color: $color-white;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  top: 26px;
+}
+
+.navigation__langguage-dropdown--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation__langguage-item {
+  padding: 6px 8px;
+  border-bottom: 1px solid $border-color-primary;
+
+  .navigation__langguage-toggle & {
+    border: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  img {
+    max-width: 20px;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
 }
 
 .navigation__account-button {
@@ -81,10 +114,6 @@
   &.bt {
     padding: 5px 16px;
   }
-}
-
-.navigation__langguage {
-
 }
 
 .navigation__langguage-toggle {
