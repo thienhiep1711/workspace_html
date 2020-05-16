@@ -4,44 +4,54 @@
       h1.page-title__text Đăng ký đối tác
     .register-partner__inner
       .register-partner__form
-        .row
-          .col-lg-4.register-partner__col
-            .form-group
-              input(type="text", placeholder="Nhập họ tên").register-partner__input
-              label.error *
-            .form-group
-              input(type="text", placeholder="Nhập số điện thoại").register-partner__input
-              label.error *
-            .form-group
-              input(type="text", placeholder="Email").register-partner__input
-              label.error *
-            select(name="").register-partner__select
-              option(value="1") Chọn loại đối tác
-              option(value="1") AUDI
-              option(value="2") BMW
-              option(value="3") TOYOTA
-              option(value="4") HONDA
-          .col-lg-4.register-partner__col
-            .form-group
-              input(type="text", placeholder="Nhập tên công ty").register-partner__input
-              label.error *
-            select(name="").register-partner__select
-              option(value="1") Chọn tỉnh/thành phố
-              option(value="1") Hà Nội
-              option(value="2") TPHCM
-              option(value="3") Đà Nẵng
-            select(name="").register-partner__select
-              option(value="1") Chọn quận/huyện
-              option(value="1") Đống Đa
-              option(value="2") Hà Đông
-              option(value="3") Thanh Xuân
-            select(name="").register-partner__select
-              option(value="1") Chọn loại dịch vụ
-              option(value="1") Xe cá nhân
-              option(value="2") Xe hợp đồng
-              option(value="3") Thuê xe sân bay
-          .col-lg-4.register-partner__banner
-            a(herf="#" title)
-              +image-lazy('img/partner/register-banner.jpg', 'register-partner__image', 'contain')
-          button#frmButton.btn.btn-primary.register-partner__link(type='submit') Đăng Ký
+        .container
+          form.contact-us__form(action="#")
+            .row
+              .col-lg-7.register-partner__col-left
+                .row
+                  .col-md-6.register-partner__col
+                    .form-group
+                      input(type="text", placeholder="Nhập họ tên").register-partner__input
+                      label.error *
+                    .form-group
+                      input(type="text", placeholder="Nhập số điện thoại").register-partner__input
+                      label.error *
+                    .form-group
+                      input(type="text", placeholder="Email").register-partner__input
+                      label.error *
+                    select(name="").register-partner__select
+                      option(value="1") Chọn loại đối tác
+                      option(value="1") AUDI
+                      option(value="2") BMW
+                      option(value="3") TOYOTA
+                      option(value="4") HONDA
+                  .col-md-6.register-partner__col
+                    .form-group
+                      input(type="text", placeholder="Nhập tên công ty").register-partner__input
+                      label.error *
+                    .form-group
+                      select(name="").register-partner__select
+                        option(value="1") Chọn tỉnh/thành phố
+                        option(value="1") Hà Nội
+                        option(value="2") TPHCM
+                        option(value="3") Đà Nẵng
+                    .form-group
+                      select(name="").register-partner__select
+                        option(value="1") Chọn quận/huyện
+                        option(value="1") Đống Đa
+                        option(value="2") Hà Đông
+                        option(value="3") Thanh Xuân
+                    .form-group
+                      select(name="").register-partner__select
+                        option(value="1") Chọn loại dịch vụ
+                        option(value="1") Xe cá nhân
+                        option(value="2") Xe hợp đồng
+                        option(value="3") Thuê xe sân bay
+                  .col-md-6.register-partner__col.register-partner__link
+                    .form-group
+                      button#frmButton.btn.btn-primary.register-partner__submit(type='submit') Đăng Ký
+              .col-lg-5.register-partner__col-right
+                .register-partner__banner
+                  a(herf="#" title)
+                    +image-lazy('img/partner/register-banner.png', 'register-partner__image', 'contain')
 

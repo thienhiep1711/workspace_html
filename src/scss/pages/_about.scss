@@ -8,9 +8,11 @@
 
 .about-timeline {
   position: relative;
-  margin-bottom: 55px;
+  margin-bottom: 30px;
 
   @include mq(sm) {
+    margin-bottom: 55px;
+
     &:before {
       content: '';
       position: absolute;
@@ -172,9 +174,11 @@
     margin: 0;
   }
 }
-
+.section--about-howto {
+  padding: 47px 0 57px;
+}
 .about-howto {
-  padding: 55px 0 57px;
+  padding: 55px 0 0;
 
   & .home-howto__item-title {
     font-size: 18px;
@@ -194,10 +198,15 @@
     height: 70px;
     border: solid 1px #bb3a28;
   }
+
   & .home-howto__item-inner {
     &:before {
       background-color: #bb3a28;
     }
+  }
+
+  .home-howto__item:last-child {
+    margin: 0;
   }
 }
 

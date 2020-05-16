@@ -11,28 +11,37 @@
             .section-box__title.section-box__title--red
               h3.section-box__text Thông tin booking
             .section-box__content
-              select(name="").contact-maps__select
-                option(value="1") Chọn tỉnh/thành phố
-                option(value="1") Hà Nội
-                option(value="2") TPHCM
-                option(value="3") Đà Nẵng
-              select(name="").contact-maps__select
-                option(value="1") Chọn quận/huyện
-                option(value="1") Đống Đa
-                option(value="2") Hà Đông
-                option(value="3") Thanh Xuân
-              select(name="").contact-maps__select
-                option(value="1") Chọn danh mục
-                option(value="1") Xe cá nhân
-                option(value="2") Xe hợp đồng
-                option(value="3") Thuê xe sân bay
-              select(name="").contact-maps__select
-                option(value="1") Chọn loại dịch vụ
-                option(value="1") Xe cá nhân
-                option(value="2") Xe hợp đồng
-                option(value="3") Thuê xe sân bay
-              form.info-booking
-                .info-booking__entry
-                  .info-booking__entry-box
-                    input.info-booking__entry-input.form-control(type="text", placeholder="Từ khoá tìm kiếm")
-              button#frmButton.btn.btn-primary.contact-maps__find-store(type='submit') Tìm kiếm
+              form.contact-us__form(action="#")
+                .form-row
+                  .row
+                    .col-md-6.col-lg-12.form-group.contact-maps__form
+                      select(name="")
+                        option(value="1") Chọn tỉnh/thành phố
+                        option(value="1") Hà Nội
+                        option(value="2") TPHCM
+                        option(value="3") Đà Nẵng
+                    .col-md-6.col-lg-12.form-group.contact-maps__form
+                      select(name="")
+                        option(value="1") Chọn quận/huyện
+                        option(value="1") Đống Đa
+                        option(value="2") Hà Đông
+                        option(value="3") Thanh Xuân
+                    .col-md-6.col-lg-12.form-group.contact-maps__form
+                      select(name="")
+                        option(value="1") Chọn danh mục
+                        option(value="1") Xe cá nhân
+                        option(value="2") Xe hợp đồng
+                        option(value="3") Thuê xe sân bay
+                    .col-md-6.col-lg-12.form-group.contact-maps__form
+                      select(name="")
+                        option(value="1") Chọn loại dịch vụ
+                        option(value="1") Xe cá nhân
+                        option(value="2") Xe hợp đồng
+                        option(value="3") Thuê xe sân bay
+                    .col-md-6.col-lg-12.form-group.contact-maps__form
+                      form.info-booking
+                        .info-booking__entry
+                          .info-booking__entry-box
+                            input.info-booking__entry-input.form-control(type="text", placeholder="Từ khoá tìm kiếm")
+                    .col-md-6.col-lg-12.form-group.contact-maps__form
+                      button#frmButton.btn.btn-primary.contact-maps__find-store(type='submit') Tìm kiếm
