@@ -14,8 +14,8 @@
     height: 100%;
     padding: 0;
 
-    @include mq(ml) {
-      max-width: 210px;
+    &:before {
+      background-color: #bb3a27;
     }
   }
 
@@ -23,16 +23,18 @@
     flex: 1 0 auto;
   }
 
+  .home-howto__item-icon {
+    border-color: #bb3a27;
+  }
+
   .home-howto__item-title {
     font-family: $font-roboto-medium;
     font-size: 18px;
-    line-height: 14px;
     color: #333;
   }
 
   .home-howto__item-text {
     font-size: 14px;
-    line-height: 14px;
     display: flex;
     flex: 1 0 auto;
     align-items: flex-end;
